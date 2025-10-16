@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Montserrat', sans-serif;
+    background-color: #ffffff;
+    color: #914d30;
+    line-height: 1.6;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+
+  button {
+    cursor: pointer;
+    font: inherit;
+  }
+
+  input, textarea {
+    font: inherit;
+  }
+
+  a{
+    font-size: 18px;
+  }
+}
+
+@layer theme {
+  :root {
+    /* Cores da Marca */
+    --color-white: #ffffff;
+    --color-olive: #4e4627;
+    --color-terracotta: #914d30;
+    
+    /* Variações Úteis */
+    --color-olive-light: #6b6038;
+    --color-olive-lighter: #f5f4f0;
+    --color-terracotta-light: #a65c3f;
+    --color-terracotta-lighter: #fdf6f3;
+    
+    /* Fontes */
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Montserrat', sans-serif;
+    
+    /* Espaçamentos */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    --spacing-2xl: 3rem;
+    
+    /* Bordas */
+    --radius: 0.5rem;
+    
+    /* Sombras */
+    --shadow: 0 1px 3px rgba(78, 70, 39, 0.1);
+    --shadow-lg: 0 4px 6px rgba(78, 70, 39, 0.15);
+  }
+}
