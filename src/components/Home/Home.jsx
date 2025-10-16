@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState, useEffect}from "react";
 // Ícones importados da biblioteca react-icons, de pacotes específicos como 'fa' (Font Awesome)
 import {
   FaFacebook,
@@ -8,6 +8,7 @@ import {
   FaSpotify,
   FaCopy,
 } from "react-icons/fa";
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 // A função de copiar PIX precisará ser definida no seu componente ou hook
 const handleCopyPix = () => {
@@ -18,6 +19,34 @@ const handleCopyPix = () => {
 };
 
 export default function Home() {
+
+  const carouselImages = [
+    'https://images.unsplash.com/photo-1529156069898-fac51a637394?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8Y2h1cmNoLGNvbW11bml0eSxреорlZXx8fHx8fDE2NzExNjA1Nzk&ixlib=rb-4.0.3&q=80&w=1400',
+    'https://images.unsplash.com/photo-1543269865-cbf427effbad?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8Y2h1cmNoLGNvbW11bml0eSxреорlZXx8fHx8fDE2NzExNjA2MTE&ixlib=rb-4.0.3&q=80&w=1400',
+    'https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8Y2h1cmNoLGNvbW11bml0eSxреорlZXx8fHx8fDE2NzExNjA2MzM&ixlib=rb-4.0.3&q=80&w=1400',
+    'https://images.unsplash.com/photo-1519340039796-f33d3c19a0a4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8Y2h1cmNoLGNvbW11bml0eSxреорlZXx8fHx8fDE2NzExNjA2NTY&ixlib=rb-4.0.3&q=80&w=1400',
+    'https://images.unsplash.com/photo-1600038865943-78c90358246d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8Y2h1cmNoLGNvbW11bml0eSxреорlZXx8fHx8fDE2NzExNjA2Nzk&ixlib=rb-4.0.3&q=80&w=1400',
+  ];
+
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  // Lógica para avançar o slide automaticamente
+  useEffect(() => {
+    const slideInterval = setInterval(() => {
+      setCurrentSlide((prevSlide) => (prevSlide + 1) % carouselImages.length);
+    }, 5000); // Muda a imagem a cada 5 segundos
+
+    return () => clearInterval(slideInterval); // Limpa o intervalo ao desmontar o componente
+  }, [carouselImages.length]);
+
+  const goToNextSlide = () => {
+    setCurrentSlide((prevSlide) => (prevSlide + 1) % carouselImages.length);
+  };
+
+  const goToPrevSlide = () => {
+    setCurrentSlide((prevSlide) => (prevSlide - 1 + carouselImages.length) % carouselImages.length);
+  };
+
   return (
     <div className="min-h-screen bg-brand-white">
       {/* Hero Section */}
@@ -90,30 +119,61 @@ export default function Home() {
       </section>
 
       {/* Seção Galeria de Fotos */}
-      <section className="py-20 px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-brand-terracotta mb-4">
-              Nossa Comunidade
-            </h2>
-            <p className="text-lg text-brand-olive/80 max-w-2xl mx-auto">
-              Momentos de comunhão, adoração e serviço.
-            </p>
+      <section className="relative w-full overflow-hidden" style={{ height: '500px' }}> 
+        <h2 className="text-3xl md:text-4xl font-bold text-brand-terracotta mb-4">
+
+                    Nossa Comunidade
+
+                </h2>
+
+                <p className="text-lg text-brand-olive/80 max-w-2xl mx-auto">
+
+                    Momentos de comunhão, adoração e serviço.
+
+                </p>{/* Altura fixa para o carrossel */}
+        {carouselImages.map((src, index) => (
+          <div
+            key={index}
+            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+              index === currentSlide ? 'opacity-100' : 'opacity-0'
+            }`}
+          >
+            <img
+              src={src}
+              alt={`Foto da comunidade ${index + 1}`}
+              className="w-full h-full object-cover" // object-cover para garantir que a imagem preencha o espaço
+            />
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {[...Array(6)].map((_, index) => (
-              <div
-                key={index}
-                className="overflow-hidden rounded-lg shadow-md aspect-square"
-              >
-                <img
-                  src={`https://images.unsplash.com/photo-1529156069898-fac51a637394?ixlib=rb-4.0.3&q=80&w=400&h=400&fit=crop&${index}`}
-                  alt={`Foto da comunidade ${index + 1}`}
-                  className="w-full h-full object-cover transition-transform duration-300 ease-in-out hover:scale-110"
-                />
-              </div>
-            ))}
-          </div>
+        ))}
+
+        {/* Botões de navegação */}
+        <button
+          onClick={goToPrevSlide}
+          className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-brand-olive/50 text-white p-3 rounded-full hover:bg-brand-olive/70 transition-colors z-10"
+          aria-label="Previous slide"
+        >
+          <FaChevronLeft size={24} />
+        </button>
+        <button
+          onClick={goToNextSlide}
+          className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-brand-olive/50 text-white p-3 rounded-full hover:bg-brand-olive/70 transition-colors z-10"
+          aria-label="Next slide"
+        >
+          <FaChevronRight size={24} />
+        </button>
+
+        {/* Indicadores de slide */}
+        <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2 z-10">
+          {carouselImages.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentSlide(index)}
+              className={`w-3 h-3 rounded-full transition-colors duration-300 ${
+                index === currentSlide ? 'bg-brand-terracotta' : 'bg-brand-white/50 hover:bg-brand-white/80'
+              }`}
+              aria-label={`Go to slide ${index + 1}`}
+            ></button>
+          ))}
         </div>
       </section>
 
