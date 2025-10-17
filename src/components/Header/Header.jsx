@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
-import Logo from "/logo-nome-IC.png";
+import Logo from "/logo-nome-IC.png"; // Certifique-se que o caminho do logo está correto
+
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -8,32 +9,27 @@ export default function Header() {
     { label: 'Início', href: '/' },
     { label: 'Nossa Fé', href: '/nossa-fe' },
     { label: 'Sermões', href: '/sermoes' },
-    { label: 'Comundado', href: '/comunicado' },
-    { label: 'Visite-ns', href: '/visite-nos' },
+    { label: 'Comunicados', href: '/comunicados' }, // Corrigi "Comundado" para "Comunicados"
+    { label: 'Visite-nos', href: '/visite-nos' },  // Corrigi "Visite-ns" para "Visite-nos"
   ];
 
   return (
-    <header className="bg-brand-white border-b border-brand-olive/10 sticky top-0 z-50">
+    //  👇 AS ALTERAÇÕES FORAM FEITAS AQUI 👇
+    <header className="sticky top-0 z-50 bg-[#fff]/75 backdrop-blur-xl border-b border-[#4e4627]/20">
       <nav className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <img className="h-20 w-auto" src={Logo} alt="Logo"></img>
-          <a href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
-            <div className="w-8 h-8 relative">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-6 h-1 bg-brand-terracotta rotate-90 absolute"></div>
-                <div className="w-6 h-1 bg-brand-terracotta absolute"></div>
-              </div>
-            </div>
-            
+          {/* Logo */}
+          <a href="/" aria-label="Página Inicial">
+            <img className="h-16 md:h-20 w-auto" src={Logo} alt="Logo Igreja da Cruz" />
           </a>
 
           {/* Desktop Menu */}
-          <ul className="hidden md:flex items-center gap-8 text-brand-olive">
+          <ul className="hidden md:flex items-center gap-8 font-black">
             {menuItems.map((item) => (
               <li key={item.href}>
                 <a
                   href={item.href}
-                  className="hover:text-brand-terracotta transition-colors font-medium"
+                  className="hover:text-[#4e4627] transition-colors"
                 >
                   {item.label}
                 </a>
@@ -45,7 +41,7 @@ export default function Header() {
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="md:hidden text-brand-olive hover:text-brand-terracotta transition-colors"
-            aria-label="Menu"
+            aria-label="Abrir menu"
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>

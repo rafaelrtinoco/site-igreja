@@ -8,6 +8,10 @@ import {
   FaSpotify,
   FaCopy,
 } from "react-icons/fa";
+import Photos from "../Photos/Photos";
+import WelcomeSection from "../WelcomeSection/WelcomeSection";
+import backgroundImage from "/public/logo-nome-IC.png";
+import VisitUsSection from "../visitUsSection/visitUsSection"
 
 // A função de copiar PIX precisará ser definida no seu componente ou hook
 const handleCopyPix = () => {
@@ -19,52 +23,36 @@ const handleCopyPix = () => {
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-brand-white">
+    <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-[600px] bg-brand-olive/90 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-brand-olive/80 to-brand-olive/60"></div>
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-96 border-4 border-brand-white/30 rotate-45"></div>
-        </div>
-        <div className="relative h-full flex flex-col items-center justify-center text-center px-6">
-          <h1 className="text-5xl md:text-6xl font-bold text-brand-white mb-6">
-            Igreja da Cruz
+      <section
+        className="relative h-screen bg-contain bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${backgroundImage})` }}
+      >
+        {/* Overlay verde com opacidade */}
+        <div className="absolute inset-0 bg-[#4e4627]/95"></div>
+
+        {/* Conteúdo centralizado */}
+        <div className="relative h-full flex flex-col items-center justify-center text-center text-[#ffffff] px-6 z-10">
+          {" "}
+          {/* z-10 para ficar acima do overlay */}
+          <h1 className="text-5xl md:text-5xl font-bold text-brand-white mb-6">
+            IGREJA DA CRUZ
           </h1>
-          <p className="text-xl md:text-2xl text-brand-white/90 max-w-3xl leading-relaxed mb-10">
-            Igreja Batista Reformada
+          <p className="text-xl md:text-1xl text-brand-white/90 max-w-3xl leading-relaxed mb-10">
+            IGREJA BATISTA REFORMADA
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <button className="bg-brand-terracotta text-brand-white px-8 py-3 rounded hover:bg-brand-terracotta-light transition-colors font-medium text-lg">
-              ASSITA AO ULTIM? SERMÃO
+            {/* Botão Primário - preenchido com terracota */}
+            <button className="bg-[#914d30] text-brand-white px-8 py-3 rounded hover:bg-[#a65c3f] transition-colors font-medium text-lg shadow-lg">
+              ASSISTA AO ÚLTIMO SERMÃO
             </button>
-            <button className="border-2 border-brand-white text-brand-white px-8 py-3 rounded hover:bg-brand-white hover:text-brand-olive transition-colors font-medium text-lg">
+            {/* Botão Secundário - outline branco */}
+            <button className="border-2 border-[#fff] text-[#fff] px-8 py-3 rounded hover:bg-[#fff] hover:text-[#4e4627] transition-colors font-medium text-lg shadow-lg">
               PLANEJE SUA VISITA
             </button>
           </div>
-        </div>
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-brand-white to-transparent"></div>
-      </section>
-      {/* Welcome Section */}
-      <section className="py-16 px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-brand-terracotta mb-6">
-            Bem vindo à IgreJa da Cruz
-          </h2>
-          <p className="text-lg text-brand-olive/80 mb-4">
-            Uma Igreja centrada no evangelho e dedicada a pregação expositiva
-            das Sagradas Escrituras.
-          </p>
-
-          <div className="space-y-3 text-brand-olive">
-            <div className="flex items-center justify-center">
-              <span className="font-medium">Escola Bíblica Dominical:</span>
-              <span className="text-brand-terracotta font-semibold">09h00</span>
-            </div>
-            <div className="flex items-center justify-center">
-              <span className="font-medium">Serviço de Culto:</span>
-              <span className="text-brand-terracotta font-semibold">10h30</span>
-            </div>
-          </div>
+          <WelcomeSection />
         </div>
       </section>
 
@@ -76,20 +64,23 @@ export default function Home() {
             Ouça os Sermões
           </h2>
           <p className="text-lg text-brand-olive/80 mb-8 max-w-2xl mx-auto">
-            Siga nossa playlist e adore a Deus conosco durante a semana.
+            Disponibilizamos os sermões pregados aos Domingo no Spotify, para
+            que você consiga ouvir quando puder.
           </p>
           <a
             href="#" // <-- Substitua com o link da sua playlist do Spotify
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-brand-terracotta text-brand-white px-8 py-3 rounded hover:bg-brand-terracotta-light transition-colors font-medium text-lg"
+            className="inline-block bg-[#914d30] text-[#fff] px-8 py-3 rounded hover:bg-[#a65c3f] transition-colors font-medium text-lg"
           >
             OUVIR NO SPOTIFY
           </a>
         </div>
       </section>
 
-      {/* Seção Galeria de Fotos */}
+      <Photos />
+
+      {/* Seção Galeria de Fotos
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
@@ -115,7 +106,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="bg-brand-olive/5 py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
@@ -166,6 +157,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <VisitUsSection />
     </div>
   );
 }

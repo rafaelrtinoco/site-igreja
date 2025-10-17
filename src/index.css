@@ -1,4 +1,8 @@
+@import 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap';
 @import "tailwindcss";
+
+
 
 @layer base {
   * {
@@ -12,8 +16,8 @@
   }
 
   body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Montserrat', sans-serif;
-    background-color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, 'Cinzel', sans-serif;
+    /* background-color: #ffffff; */
     color: #914d30;
     line-height: 1.6;
   }
