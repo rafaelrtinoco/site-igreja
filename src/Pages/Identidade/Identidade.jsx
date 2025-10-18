@@ -13,13 +13,13 @@ const faithDocuments = [
   },
   {
     id: 2,
-    title: 'Credo Niceno',
+    title: 'Pacto de Membresia',
     fileUrl: '/docs/credo_niceno.pdf',
     styleType: 'light',
   },
   {
     id: 3,
-    title: 'Declaração de Cambridge',
+    title: 'Declaração ...',
     fileUrl: '/docs/declaracao_cambridge.pdf',
     styleType: 'dark',
   },
@@ -31,13 +31,13 @@ const faithDocuments = [
   },
   {
     id: 5,
-    title: 'Sínodo de Dort',
+    title: 'Teologia PActual Batista',
     fileUrl: '/docs/sinodo_dort.pdf',
     styleType: 'dark',
   },
   {
     id: 6,
-    title: 'Credo de Atanásio',
+    title: 'Credo ...',
     fileUrl: '/docs/credo_atanasio.pdf',
     styleType: 'light',
   },
