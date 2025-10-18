@@ -23,33 +23,6 @@ const handleCopyPix = () => {
 
 export default function Home() {
 
-  const carouselImages = [
-    'https://images.unsplash.com/photo-1529156069898-fac51a637394?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8Y2h1cmNoLGNvbW11bml0eSxреорlZXx8fHx8fDE2NzExNjA1Nzk&ixlib=rb-4.0.3&q=80&w=1400',
-    'https://images.unsplash.com/photo-1543269865-cbf427effbad?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8Y2h1cmNoLGNvbW11bml0eSxреорlZXx8fHx8fDE2NzExNjA2MTE&ixlib=rb-4.0.3&q=80&w=1400',
-    'https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8Y2h1cmNoLGNvbW11bml0eSxреорlZXx8fHx8fDE2NzExNjA2MzM&ixlib=rb-4.0.3&q=80&w=1400',
-    'https://images.unsplash.com/photo-1519340039796-f33d3c19a0a4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8Y2h1cmNoLGNvbW11bml0eSxреорlZXx8fHx8fDE2NzExNjA2NTY&ixlib=rb-4.0.3&q=80&w=1400',
-    'https://images.unsplash.com/photo-1600038865943-78c90358246d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8Y2h1cmNoLGNvbW11bml0eSxреорlZXx8fHx8fDE2NzExNjA2Nzk&ixlib=rb-4.0.3&q=80&w=1400',
-  ];
-
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  // Lógica para avançar o slide automaticamente
-  useEffect(() => {
-    const slideInterval = setInterval(() => {
-      setCurrentSlide((prevSlide) => (prevSlide + 1) % carouselImages.length);
-    }, 5000); // Muda a imagem a cada 5 segundos
-
-    return () => clearInterval(slideInterval); // Limpa o intervalo ao desmontar o componente
-  }, [carouselImages.length]);
-
-  const goToNextSlide = () => {
-    setCurrentSlide((prevSlide) => (prevSlide + 1) % carouselImages.length);
-  };
-
-  const goToPrevSlide = () => {
-    setCurrentSlide((prevSlide) => (prevSlide - 1 + carouselImages.length) % carouselImages.length);
-  };
-
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
