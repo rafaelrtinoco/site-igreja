@@ -16,8 +16,8 @@
   }
 
   body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Cinzel', sans-serif;
-    /* background-color: #ffffff; */
+    font-family: var(--font-sans);
+    background-color: #ffffff;
     color: #914d30;
     line-height: 1.6;
   }
@@ -55,7 +55,8 @@
     --color-terracotta-lighter: #fdf6f3;
     
     /* Fontes */
-    --font-sans: -apple-system, BlinkMacSystemFont, 'Montserrat', sans-serif;
+    --font-sans: 'Cinzel', -apple-system, BlinkMacSystemFont, serif;
+    /* --font-serif: 'Cinzel', serif; */
     
     /* Espaçamentos */
     --spacing-xs: 0.25rem;
