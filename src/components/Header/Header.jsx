@@ -1,38 +1,40 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
-import Logo from "/logo-nome-IC.png"; // Certifique-se que o caminho do logo está correto
+import { Link } from 'react-router-dom'; // Você já tem o import correto!
+import Logo from "/logo-nome-IC.png"; 
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuItems = [
     { label: 'Início', href: '/' },
-    { label: 'Nossa Fé', href: '/nossa-fe' },
+    { label: 'Identidade', href: '/identidade' },
     { label: 'Sermões', href: '/sermoes' },
-    { label: 'Comunicados', href: '/comunicados' }, // Corrigi "Comundado" para "Comunicados"
-    { label: 'Visite-nos', href: '/visite-nos' },  // Corrigi "Visite-ns" para "Visite-nos"
+    { label: 'Comunicados', href: '/comunicados' },
+    { label: 'Visite-nos', href: '/visite-nos' },
   ];
 
   return (
-    //  👇 AS ALTERAÇÕES FORAM FEITAS AQUI 👇
     <header className="sticky top-0 z-50 bg-[#fff]/75 backdrop-blur-xl border-b border-[#4e4627]/20">
       <nav className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="/" aria-label="Página Inicial">
+          {/* 👇 ALTERADO DE <a> PARA <Link> 👇 */}
+          <Link to="/" aria-label="Página Inicial">
             <img className="h-16 md:h-20 w-auto" src={Logo} alt="Logo Igreja da Cruz" />
-          </a>
+          </Link>
 
           {/* Desktop Menu */}
           <ul className="hidden md:flex items-center gap-8 font-black">
             {menuItems.map((item) => (
               <li key={item.href}>
-                <a
-                  href={item.href}
+                {/* 👇 ALTERADO DE <a> PARA <Link> E href PARA to 👇 */}
+                <Link
+                  to={item.href}
                   className="hover:text-[#4e4627] transition-colors"
                 >
                   {item.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -53,13 +55,14 @@ export default function Header() {
             <ul className="flex flex-col gap-4">
               {menuItems.map((item) => (
                 <li key={item.href}>
-                  <a
-                    href={item.href}
+                  {/* 👇 ALTERADO DE <a> PARA <Link> E href PARA to 👇 */}
+                  <Link
+                    to={item.href}
                     className="text-brand-olive hover:text-brand-terracotta transition-colors font-medium block py-2"
-                    onClick={() => setIsMenuOpen(false)}
+                    onClick={() => setIsMenuOpen(false)} // Mantém o onClick para fechar o menu
                   >
                     {item.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

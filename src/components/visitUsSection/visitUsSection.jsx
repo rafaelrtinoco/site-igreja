@@ -6,14 +6,14 @@ export default function VisitUsSection() {
 
   return (
     // Seção principal com fundo bg-brand-olive-lighter (creme claro)
-    <section className="py-20 px-6 bg-brand-olive-lighter">
+    <section className="py-20 px-6 bg-[#f5f4f0]">
       <div className="max-w-7xl mx-auto">
         {/* Título da Seção - Se necessário */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-brand-terracotta font-cinzel">
+          <h2 className="text-4xl font-bold text-{#914d30} font-cinzel">
             Visite-nos
           </h2>
-          <p className="text-lg text-brand-olive/80 mt-2">
+          <p className="text-lg text-[#4e4627]/80 mt-2">
             Venha nos conhecer.
           </p>
         </div>
@@ -21,10 +21,10 @@ export default function VisitUsSection() {
         {/* Layout de 2 colunas para desktop, empilhado para mobile */}
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-8 items-start">
           {/* Coluna da Esquerda: Informações de Contato e Horários */}
-          <div className="w-full lg:w-1/2 flex flex-col gap-8 text-brand-olive">
+          <div className="w-full lg:w-1/2 flex flex-col gap-8 text-[#4e4627]">
             {/* Endereço */}
             <div>
-              <h3 className="text-2xl font-semibold text-brand-terracotta mb-3 font-cinzel">
+              <h3 className="text-2xl font-semibold text-[#914d30] mb-3 font-cinzel">
                 ENDEREÇO
               </h3>
               <p className="text-lg leading-relaxed">
@@ -36,7 +36,7 @@ export default function VisitUsSection() {
                 href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`} 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="inline-block mt-4 text-brand-terracotta hover:text-brand-terracotta-light transition-colors font-medium"
+                className="inline-block mt-4 text-[#914d30] hover:text-brand-[#a65c3f] transition-colors font-medium"
               >
                 Ver no mapa
               </a>
@@ -44,7 +44,7 @@ export default function VisitUsSection() {
 
             {/* Horários */}
             <div>
-              <h3 className="text-2xl font-semibold text-brand-terracotta mb-3 font-cinzel">
+              <h3 className="text-2xl font-semibold text-[#914d30] mb-3 font-cinzel">
                 HORÁRIOS
               </h3>
               <p className="text-lg mb-2">
@@ -63,7 +63,7 @@ export default function VisitUsSection() {
 
             {/* Contato */}
             <div>
-              <h3 className="text-2xl font-semibold text-brand-terracotta mb-3 font-cinzel">
+              <h3 className="text-2xl font-semibold text-[#914d30] mb-3 font-cinzel">
                 CONTATO
               </h3>
               <p className="text-lg">(11) 98235-1338</p>
@@ -73,7 +73,7 @@ export default function VisitUsSection() {
           </div>
 
           {/* Coluna da Direita: Mapa do Google Maps */}
-          <div className="w-full lg:w-1/2 h-[400px] lg:h-[600px] bg-brand-white rounded-lg shadow-xl overflow-hidden">
+          <div className="w-full lg:w-1/2 h-[400px] lg:h-[600px] bg-[#fff] rounded-lg shadow-xl overflow-hidden">
             <iframe
               src={googleMapsUrl}
               width="100%"
