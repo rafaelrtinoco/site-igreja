@@ -11,8 +11,9 @@ export default function VisitUsSection() {
         {/* Título da Seção - Se necessário */}
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-{#914d30} font-cinzel">
-            Onde estamos
+            Visite-nos
           </h2>
+          <div className="w-16 h-1 bg-black mx-auto mb-6 opacity-10"></div>
           <p className="text-lg text-[#4e4627]/80 mt-2">
             Venha nos conhecer.
           </p>
@@ -41,7 +42,36 @@ export default function VisitUsSection() {
                 Ver no mapa
               </a>
             </div>
+
+            {/* Horários */}
+            <div>
+              <h3 className="text-2xl font-semibold text-[#914d30] mb-3 font-cinzel">
+                HORÁRIOS
+              </h3>
+              <p className="text-lg mb-2">
+                <span className="font-semibold">Serviço de Culto:</span> <br />
+                Domingo 10h30
+              </p>
+              <p className="text-lg mb-2">
+                <span className="font-semibold">Reunião de Oração:</span> <br />
+                Domingo 09h15
+              </p>
+              <p className="text-lg">
+                <span className="font-semibold">Reunião de Homens de Mulheres:</span> <br />
+                Ultimo Sábado do mês 20h00
+              </p>
             </div>
+
+            {/* Contato */}
+            <div>
+              <h3 className="text-2xl font-semibold text-[#914d30] mb-3 font-cinzel">
+                CONTATO
+              </h3>
+              <p className="text-lg">(11) 98235-1338</p>
+            </div>
+
+           
+          </div>
 
           {/* Coluna da Direita: Mapa do Google Maps */}
           <div className="w-full lg:w-1/2 h-[400px] lg:h-[600px] bg-[#fff] rounded-lg shadow-xl overflow-hidden">

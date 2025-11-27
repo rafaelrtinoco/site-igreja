@@ -21,6 +21,8 @@ const handleCopyPix = () => {
   });
 };
 
+
+
 export default function Home() {
   return (
     <div className="min-h-screen">
@@ -80,33 +82,6 @@ export default function Home() {
 
       <Photos />
 
-      {/* Seção Galeria de Fotos
-      <section className="py-20 px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-brand-terracotta mb-4">
-              Nossa Comunidade
-            </h2>
-            <p className="text-lg text-brand-olive/80 max-w-2xl mx-auto">
-              Momentos de comunhão, adoração e serviço.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {[...Array(6)].map((_, index) => (
-              <div
-                key={index}
-                className="overflow-hidden rounded-lg shadow-md aspect-square"
-              >
-                <img
-                  src={`https://images.unsplash.com/photo-1529156069898-fac51a637394?ixlib=rb-4.0.3&q=80&w=400&h=400&fit=crop&${index}`}
-                  alt={`Foto da comunidade ${index + 1}`}
-                  className="w-full h-full object-cover transition-transform duration-300 ease-in-out hover:scale-110"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section> */}
 
       <section className="bg-brand-olive/5 py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
@@ -131,7 +106,7 @@ export default function Home() {
               <div className="flex justify-center md:justify-start">
                 <div className="flex items-center gap-2 p-3 border-2 border-brand-olive/20 rounded bg-white">
                   <span className="font-mono text-brand-terracotta tracking-wider">
-                    00.000.000/0001-00
+                    56.057.319/0001-08
                   </span>
                   <button
                     onClick={handleCopyPix}
