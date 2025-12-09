@@ -117,7 +117,7 @@ export default function Eventos() {
             <FaCalendarAlt />
             <span className="uppercase tracking-[0.2em] text-sm font-semibold">Calendário 2025</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-[#4e4627] tracking-tight mb-6">
+          <h2 className="text-4xl md:text-4xl font-bold text-[#914d30] tracking-tight mb-6">
             Próximos Eventos
           </h2>
           <div className="w-16 h-1 bg-[#4e4627] mx-auto mb-6 opacity-10 rounded-full"></div>

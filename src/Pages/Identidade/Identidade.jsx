@@ -72,10 +72,10 @@ export default function Identidade() {
       <main className="py-16 sm:py-24 px-6">
         {/* Seção do Cabeçalho */}
         <header className="text-center max-w-4xl mx-auto mb-16 sm:mb-20">
-          <h2 className="text-4xl md:text-4xl font-bold text-[#4e4627] tracking-tight mb-4">
+          <h2 className="text-4xl md:text-4xl font-bold text-[#914d30] tracking-tight mb-6">
             A Igreja da Cruz
           </h2>
-          
+          <div className="w-16 h-1 bg-black mx-auto mb-6 opacity-10"></div>
           {/* ALTERAÇÃO AQUI: Adicionado 'text-justify' e 'hyphens-auto' */}
           <p className="text-justify hyphens-auto text-base md:text-lg text-[#4e4627]/80 max-w-3xl mx-auto">
             É uma <strong>igreja batista reformada localizada na Zona Leste de São

@@ -1,60 +1,72 @@
 import React from 'react';
 
+import Photo1 from "/photo1.webp"
+import Photo2 from "/photo2.webp"
+import Photo3 from "/photo3.webp"
+import Photo4 from "/photo4.webp"
+import Photo5 from "/photo5.webp"
+import Photo6 from "/photo6.webp"
+import Photo7 from "/Photo7.webp"
+import Photo8 from "/photo8.webp"
+import Photo9 from "/photo9.webp"
+
+
+
 export default function PhotoGallerySection() {
   // Array de objetos para cada foto, incluindo URL e classes específicas para o layout
   // Você pode adicionar mais propriedades aqui, como 'alt' text, links, etc.
   const photos = [
     {
       id: 1,
-      src: "https://images.unsplash.com/photo-1510525287611-6644f8087781?auto=format&fit=crop&q=80&w=400&h=400", // Imagem placeholder
+      src: Photo1, // Imagem placeholder
       alt: "Pessoas em adoração",
       className: "col-span-2 row-span-2 md:col-span-2 md:row-span-2", // Grande, ocupando 2x2 células
     },
     {
       id: 2,
-      src: "https://images.unsplash.com/photo-1543269865-cbf427fdc87e?auto=format&fit=crop&q=80&w=300&h=200", // Imagem placeholder
+      src: Photo5, // Imagem placeholder
       alt: "Comunidade rindo",
       className: "col-span-1 md:col-span-1", // Tamanho padrão
     },
     {
       id: 3,
-      src: "https://images.unsplash.com/photo-1529156069898-fac51a637394?auto=format&fit=crop&q=80&w=300&h=300", // Imagem placeholder
+      src: Photo6, // Imagem placeholder
       alt: "Famílias unidas",
       className: "col-span-1 md:col-span-1", // Tamanho padrão
     },
     {
       id: 4,
-      src: "https://images.unsplash.com/photo-1533157793181-ed8148b5ffb9?auto=format&fit=crop&q=80&w=600&h=200", // Imagem placeholder
+      src: Photo4, // Imagem placeholder
       alt: "Grupo de jovens",
       className: "col-span-2 md:col-span-2", // Retangular horizontal
     },
     {
       id: 5,
-      src: "https://images.unsplash.com/photo-1574026366050-65e04b4d7c00?auto=format&fit=crop&q=80&w=200&h=300", // Imagem placeholder
+      src: Photo7,
       alt: "Momento de oração",
       className: "col-span-1 row-span-2 md:col-span-1 md:row-span-2", // Retangular vertical (alto)
     },
     {
       id: 6,
-      src: "https://images.unsplash.com/photo-1502672260268-d055620df93d?auto=format&fit=crop&q=80&w=300&h=300", // Imagem placeholder
+      src: Photo2, // Imagem placeholder
       alt: "Mesa de comunhão",
       className: "col-span-1 md:col-span-1", // Tamanho padrão
     },
     {
       id: 7,
-      src: "https://images.unsplash.com/photo-1543269665-b16952813583?auto=format&fit=crop&q=80&w=400&h=250", // Imagem placeholder
+      src: Photo8, // Imagem placeholder
       alt: "Encontro de membros",
       className: "col-span-1 md:col-span-1", // Tamanho padrão
     },
     {
       id: 8,
-      src: "https://images.unsplash.com/photo-1510531707963-c350117004f8?auto=format&fit=crop&q=80&w=300&h=400", // Imagem placeholder
-      alt: "Crianças na igreja",
+      src: Photo3,
+      alt: "Foto da Biblia",
       className: "col-span-1 md:col-span-1", // Tamanho padrão
     },
     {
       id: 9,
-      src: "https://images.unsplash.com/photo-1541818787752-6d11d11e5c8e?auto=format&fit=crop&q=80&w=200&h=200", // Imagem placeholder
+      src: Photo9, // Imagem placeholder
       alt: "Pequenos grupos",
       className: "col-span-1 md:col-span-1", // Tamanho padrão
     },

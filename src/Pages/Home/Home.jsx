@@ -10,7 +10,7 @@ import {
 } from "react-icons/fa";
 import Photos from "../../components/Photos/Photos";
 import WelcomeSection from "../../components/WelcomeSection/WelcomeSection";
-import backgroundImage from "/public/logo-nome-IC.png";
+import backgroundImage from "/logo-nome-IC.png";
 import VisitUsSection from "../../components/visitUsSection/visitUsSection"
 
 // A função de copiar PIX precisará ser definida no seu componente ou hook
@@ -85,9 +85,10 @@ export default function Home() {
 
       <section className="bg-brand-olive/5 py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-brand-terracotta mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-brand-terracotta mb-6">
             Ofertas
           </h2>
+          <div className="w-16 h-1 bg-black mx-auto mb-6 opacity-10"></div>
           <p className="text-lg text-brand-olive/80 mb-10 max-w-2xl mx-auto">
             "Para aqueles que desejam louvar ao Senhor com suas ofertas, a
             contribuição pode ser feita através do PIX da Igreja. Que ninguém se

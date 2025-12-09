@@ -1,8 +1,8 @@
 import React from 'react';
 
 export default function VisitUsSection() {
-  const address = "Rua Damásio Pinto, 1865 - Paraíso XV de Novembro, São Paulo - SP - 08246-058";
-  const googleMapsUrl = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.0519099496734!2d-46.43859662496734!3d-23.52988167883201!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce614c0a526685%3A0x6a2c270d18d41517!2sRua%20Dam%C3%A1sio%20Pinto%2C%201865%20-%20Para%C3%ADso%20XV%20de%20Novembro%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2008246-058!5e0!3m2!1spt-BR!2sbr!4v1709664551125!5m2!1spt-BR!2sbr`; // URL do Google Maps Embed (substitua pela sua se quiser mais personalizado)
+  const address = "Rua Jucuruçu, 282 - Paraíso XV de Novembro, São Paulo - SP - 08246-031";
+  const googleMapsUrl = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.0494077973117!2d-46.4340477!3d-23.5307253!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce641bfc877b9b%3A0x838ec41647d1f56a!2sR.%20Jucurucu%2C%20282%20-%20Parada%20XV%20de%20Novembro%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2008246-030!5e0!3m2!1spt-BR!2sbr!4v1765305237148!5m2!1spt-BR!2sbr`; // URL do Google Maps Embed (substitua pela sua se quiser mais personalizado)
 
   return (
     // Seção principal com fundo bg-brand-olive-lighter (creme claro)
@@ -28,9 +28,9 @@ export default function VisitUsSection() {
                 ENDEREÇO
               </h3>
               <p className="text-lg leading-relaxed">
-                RUA DAMÁSIO PINTO, 1865 A <br />
+                RUA JUCURUÇU, 282 <br />
                 PARADA XV DE NOVEMBRO – SÃO PAULO – SP <br />
-                CEP: 08246-058
+                CEP: 08246-031
               </p>
               <a 
                 href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`} 
