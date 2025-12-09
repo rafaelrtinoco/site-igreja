@@ -7,7 +7,7 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuItems = [
-    { label: 'Início', href: '/' },
+    { label: 'Início', href: '/site-igreja' },
     {
       label: 'Identidade',
       href: '/identidade',
