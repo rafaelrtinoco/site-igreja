@@ -31,7 +31,7 @@ export default function VisitUsSection() {
               <p className="text-lg leading-relaxed">
                 RUA JUCURUÇU, 282<br />
                 PARADA XV DE NOVEMBRO – SÃO PAULO – SP <br />
-                CEP: 08246-031
+                CEP: 08246-030
               </p>
               <a 
                 href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`} 

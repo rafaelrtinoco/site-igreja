@@ -10,7 +10,7 @@ import {
 } from "react-icons/fa";
 import Photos from "../../components/Photos/Photos";
 import WelcomeSection from "../../components/WelcomeSection/WelcomeSection";
-import backgroundImage from "/logo-nome-IC.png";
+import backgroundImage from "/background-home.webp";
 import VisitUsSection from "../../components/visitUsSection/visitUsSection"
 
 // A função de copiar PIX precisará ser definida no seu componente ou hook
@@ -28,35 +28,31 @@ export default function Home() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section
-        className="relative h-screen bg-contain bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${backgroundImage})` }}
-      >
-        {/* Overlay verde com opacidade */}
-        <div className="absolute inset-0 bg-[#4e4627]/95"></div>
+  className="relative h-screen bg-cover bg-center bg-no-repeat"
+  style={{ backgroundImage: `url(${backgroundImage})` }}
+>
+  {/* Overlay verde com opacidade */}
+  <div className="absolute inset-0 bg-[#4e4627]/95"></div>
 
-        {/* Conteúdo centralizado */}
-        <div className="relative h-full flex flex-col items-center justify-center text-center text-[#ffffff] px-6 z-10">
-          {" "}
-          {/* z-10 para ficar acima do overlay */}
-          <h1 className="text-5xl md:text-5xl font-bold text-brand-white mb-6">
-            IGREJA DA CRUZ
-          </h1>
-          <p className="text-xl md:text-1xl text-brand-white/90 max-w-3xl leading-relaxed mb-10">
-            IGREJA BATISTA REFORMADA
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            {/* Botão Primário - preenchido com terracota */}
-            <button className="bg-[#914d30] text-brand-white px-8 py-3 rounded hover:bg-[#a65c3f] transition-colors font-medium text-lg shadow-lg">
-              ASSISTA AO ÚLTIMO SERMÃO
-            </button>
-            {/* Botão Secundário - outline branco */}
-            <button className="border-2 border-[#fff] text-[#fff] px-8 py-3 rounded hover:bg-[#fff] hover:text-[#4e4627] transition-colors font-medium text-lg shadow-lg">
-              PLANEJE SUA VISITA
-            </button>
-          </div>
-          <WelcomeSection />
-        </div>
-      </section>
+  {/* Conteúdo centralizado */}
+  <div className="relative h-full flex flex-col items-center justify-center text-center text-[#ffffff] px-6 z-10">
+    <h1 className="text-5xl md:text-5xl font-bold text-brand-white mb-6">
+      IGREJA DA CRUZ
+    </h1>
+    <p className="text-xl md:text-1xl text-brand-white/90 max-w-3xl leading-relaxed mb-10">
+      IGREJA BATISTA REFORMADA
+    </p>
+    <div className="flex flex-col sm:flex-row gap-4">
+      <button className="bg-[#914d30] text-brand-white px-8 py-3 rounded hover:bg-[#a65c3f] transition-colors font-medium text-lg shadow-lg">
+        ASSISTA AO ÚLTIMO SERMÃO
+      </button>
+      <button className="border-2 border-[#fff] text-[#fff] px-8 py-3 rounded hover:bg-[#fff] hover:text-[#4e4627] transition-colors font-medium text-lg shadow-lg">
+        PLANEJE SUA VISITA
+      </button>
+    </div>
+    <WelcomeSection />
+  </div>
+</section>
 
       {/* Seção Spotify */}
       <section className="bg-brand-olive-lighter py-20 px-6">
