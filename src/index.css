@@ -1,9 +1,38 @@
-@import 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap';
-@import 'https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap';
+@import "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap";
 @import "tailwindcss";
 
+@theme {
+  /* Cores da Marca */
+  --color-white: #ffffff;
+  --color-olive: #4e4627;
+  --color-terracotta: #914d30;
 
+  /* Variações Úteis */
+  --color-olive-light: #6b6038;
+  --color-olive-lighter: #f5f4f0;
+  --color-terracotta-light: #a65c3f;
+  --color-terracotta-lighter: #fdf6f3;
 
+  /* Fontes */
+  --font-sans: "Cinzel", -apple-system, BlinkMacSystemFont, serif;
+  --font-montserrat: "Montserrat", sans-serif;
+
+  /* Espaçamentos */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+
+  /* Bordas e Sombras */
+  --radius-custom: 0.5rem;
+  --shadow-custom: 0 1px 3px rgba(78, 70, 39, 0.1);
+  --shadow-custom-lg: 0 4px 6px rgba(78, 70, 39, 0.15);
+}
+
+/* 3. Por fim, as camadas de base e estilos globais */
 @layer base {
   * {
     margin: 0;
@@ -17,8 +46,8 @@
 
   body {
     font-family: var(--font-sans);
-    background-color: #ffffff;
-    color: #914d30;
+    background-color: var(--color-white);
+    color: var(--color-terracotta);
     line-height: 1.6;
   }
 
@@ -32,45 +61,21 @@
     font: inherit;
   }
 
-  input, textarea {
+  input,
+  textarea {
     font: inherit;
   }
 
-  a{
+  a {
     font-size: 18px;
+    text-decoration: none;
+    color: inherit;
   }
-}
-
-@layer theme {
-  :root {
-    /* Cores da Marca */
-    --color-white: #ffffff;
-    --color-olive: #4e4627;
-    --color-terracotta: #914d30;
-    
-    /* Variações Úteis */
-    --color-olive-light: #6b6038;
-    --color-olive-lighter: #f5f4f0;
-    --color-terracotta-light: #a65c3f;
-    --color-terracotta-lighter: #fdf6f3;
-    
-    /* Fontes */
-    --font-sans: 'Cinzel', -apple-system, BlinkMacSystemFont, serif;
-    /* --font-serif: 'Cinzel', serif; */
-    
-    /* Espaçamentos */
-    --spacing-xs: 0.25rem;
-    --spacing-sm: 0.5rem;
-    --spacing-md: 1rem;
-    --spacing-lg: 1.5rem;
-    --spacing-xl: 2rem;
-    --spacing-2xl: 3rem;
-    
-    /* Bordas */
-    --radius: 0.5rem;
-    
-    /* Sombras */
-    --shadow: 0 1px 3px rgba(78, 70, 39, 0.1);
-    --shadow-lg: 0 4px 6px rgba(78, 70, 39, 0.15);
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: var(--color-olive-light);
+    border-radius: 10px;
   }
 }

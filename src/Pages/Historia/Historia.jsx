@@ -3,7 +3,7 @@ import React from "react";
 // Um componente simples para aplicar o estilo de sublinhado
 const Sublinhado = ({ children }) => {
   return (
-    <span className="underline decoration-[#4e4627] decoration-2 underline-offset-2 ">
+    <span className="underline decoration-olive decoration-2 underline-offset-2 ">
       {children}
     </span>
   );
@@ -12,18 +12,18 @@ const Sublinhado = ({ children }) => {
 // --- COMPONENTE PRINCIPAL ---
 export default function Identidade() {
   return (
-    <div className="bg-[#f7f5f1] min-h-screen">
+    <div className="bg-olive-lighter min-h-screen">
       <main className="py-16 sm:py-24 px-6">
         {/* Seção do Cabeçalho */}
         <header className="text-center max-w-4xl mx-auto mb-16 sm:mb-20">
-          <h2 className="text-4xl md:text-4xl font-bold text-[#914d30] tracking-tight mb-6">
+          <h2 className="text-4xl md:text-4xl font-bold text-terracotta tracking-tight mb-6">
             História da Igreja
           </h2>
 
           <div className="w-16 h-1 bg-black mx-auto mb-6 opacity-10"></div>
 
           {/* ALTERAÇÃO AQUI: Adicionado 'text-justify' e 'hyphens-auto' */}
-          <p className="text-justify hyphens-auto text-base md:text-lg text-[#4e4627]/80 max-w-3xl mx-auto">
+          <p className="text-justify hyphens-auto text-base md:text-lg text-olive/80 max-w-3xl mx-auto">
             A Igreja da Cruz nasceu de uma santa inquietação: o desejo de viver
             em comunhão em uma igreja centrada no evangelho, com convicções
             bíblicas reformada e credobatista, no Extremo Leste de São Paulo.

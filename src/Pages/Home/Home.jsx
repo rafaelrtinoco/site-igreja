@@ -12,6 +12,7 @@ import Photos from "../../components/Photos/Photos";
 import WelcomeSection from "../../components/WelcomeSection/WelcomeSection";
 import backgroundImage from "/background-home.webp";
 import VisitUsSection from "../../components/visitUsSection/visitUsSection"
+import QrCode from "/qrcode-pix.png";
 
 // A função de copiar PIX precisará ser definida no seu componente ou hook
 const handleCopyPix = () => {
@@ -32,10 +33,10 @@ export default function Home() {
   style={{ backgroundImage: `url(${backgroundImage})` }}
 >
   {/* Overlay verde com opacidade */}
-  <div className="absolute inset-0 bg-[#4e4627]/95"></div>
+  <div className="absolute inset-0 bg-olive/95"></div>
 
   {/* Conteúdo centralizado */}
-  <div className="relative h-full flex flex-col items-center justify-center text-center text-[#ffffff] px-6 z-10">
+  <div className="relative h-full flex flex-col items-center justify-center text-center text-white px-6 z-10">
     <h1 className="text-5xl md:text-5xl font-bold text-brand-white mb-6">
       IGREJA DA CRUZ
     </h1>
@@ -43,10 +44,10 @@ export default function Home() {
       IGREJA BATISTA REFORMADA
     </p>
     <div className="flex flex-col sm:flex-row gap-4">
-      <button className="bg-[#914d30] text-brand-white px-8 py-3 rounded hover:bg-[#a65c3f] transition-colors font-medium text-lg shadow-lg">
+      <button className="bg-terracotta text-brand-white px-8 py-3 rounded hover:bg-terracotta transition-colors font-medium text-lg shadow-lg">
         ASSISTA AO ÚLTIMO SERMÃO
       </button>
-      <button className="border-2 border-[#fff] text-[#fff] px-8 py-3 rounded hover:bg-[#fff] hover:text-[#4e4627] transition-colors font-medium text-lg shadow-lg">
+      <button className="border-2 border-white text-white px-8 py-3 rounded hover:bg-white hover:text-olive transition-colors font-medium text-lg shadow-lg">
         PLANEJE SUA VISITA
       </button>
     </div>
@@ -61,7 +62,7 @@ export default function Home() {
           <h2 className="text-3xl md:text-4xl font-bold text-brand-olive mb-4">
             Ouça os Sermões
           </h2>
-          <p className="text-lg text-brand-olive/80 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg text-brand-olive/80 mb-8 max-w-4xl mx-auto">
             Disponibilizamos os sermões pregados aos Domingo no Spotify, para
             que você consiga ouvir quando puder.
           </p>
@@ -69,7 +70,7 @@ export default function Home() {
             href="#" // <-- Substitua com o link da sua playlist do Spotify
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-[#914d30] text-[#fff] px-8 py-3 rounded hover:bg-[#a65c3f] transition-colors font-medium text-lg"
+            className="inline-block bg-terracotta text-[#fff] px-8 py-3 rounded hover:bg-terracotta-light transition-colors font-medium text-lg"
           >
             OUVIR NO SPOTIFY
           </a>
@@ -85,7 +86,7 @@ export default function Home() {
             Ofertas
           </h2>
           <div className="w-16 h-1 bg-black mx-auto mb-6 opacity-10"></div>
-          <p className="text-lg text-brand-olive/80 mb-10 max-w-2xl mx-auto">
+          <p className="text-lg text-brand-olive/80 mb-10 max-w-4xl mx-auto">
             "Para aqueles que desejam louvar ao Senhor com suas ofertas, a
             contribuição pode ser feita através do PIX da Igreja. Que ninguém se
             sinta pressionado a contribuir, mas que cada um o faça conforme
@@ -119,9 +120,9 @@ export default function Home() {
               <p className="text-brand-olive font-semibold mb-2">
                 Ou aponte a câmera
               </p>
-              <div className="bg-white p-2 border-2 border-brand-olive/20 rounded-lg inline-block">
+              <div className="bg-white p-2 inline-block">
                 <img
-                  src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=SuaChavePIX"
+                  src={QrCode}
                   alt="QR Code PIX"
                 />
               </div>

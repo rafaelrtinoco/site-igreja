@@ -1,5 +1,5 @@
 {
-  "homepage":"https://rafaelrtinoco.github.io/site-igreja",
+  "homepage": "https://rafaelrtinoco.github.io/site-igreja",
   "name": "igreja-da-cruz",
   "private": true,
   "version": "0.0.0",
@@ -9,10 +9,11 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "predeploy":"npm run build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@tailwindcss/postcss": "^4.2.4",
     "@tailwindcss/vite": "^4.1.14",
     "lucide-react": "^0.545.0",
     "react": "^19.1.1",

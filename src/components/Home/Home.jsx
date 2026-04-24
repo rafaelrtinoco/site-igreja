@@ -12,6 +12,7 @@ import Photos from "../Photos/Photos";
 import WelcomeSection from "../WelcomeSection/WelcomeSection";
 import backgroundImage from "/public/logo-nome-IC.png";
 import VisitUsSection from "../visitUsSection/visitUsSection"
+import QrCode from "../../../public/qrcode-pix.png";
 
 // A função de copiar PIX precisará ser definida no seu componente ou hook
 const handleCopyPix = () => {
@@ -146,11 +147,11 @@ export default function Home() {
             </div>
             <div className="text-center">
               <p className="text-brand-olive font-semibold mb-2">
-                Ou aponte a câmera
+                {/* Ou aponte a câmera */}
               </p>
               <div className="bg-white p-2 border-2 border-brand-olive/20 rounded-lg inline-block">
                 <img
-                  src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=SuaChavePIX"
+                  // src={QrCode}
                   alt="QR Code PIX"
                 />
               </div>

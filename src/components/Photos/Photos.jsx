@@ -79,7 +79,7 @@ export default function PhotoGallerySection() {
           <h2 className="text-3xl md:text-4xl font-bold text-brand-terracotta mb-4">
             Nossa Comunidade
           </h2>
-          <p className="text-lg text-brand-olive/80 max-w-2xl mx-auto">
+          <p className="text-lg text-brand-olive/80 max-w-4xl mx-auto">
             Momentos de comunhão, adoração e serviço.
           </p>
         </div>

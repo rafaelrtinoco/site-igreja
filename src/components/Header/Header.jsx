@@ -1,7 +1,7 @@
 import { useState, Fragment } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import Logo from "/logo-nome-IC.png";
+import Logo from "/logo-LARANJA.png";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -27,7 +27,7 @@ export default function Header() {
       <nav className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" aria-label="Página Inicial">
+          <Link to="/site-igreja" aria-label="Página Inicial">
             <img className="h-16 md:h-20 w-auto" src={Logo} alt="Logo Igreja da Cruz" />
           </Link>
 

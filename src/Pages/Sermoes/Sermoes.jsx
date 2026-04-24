@@ -1,5 +1,12 @@
 import React from "react";
 import { FaSpotify, FaYoutube } from "react-icons/fa";
+import vindeAMim from "/vinde-a-mim.webp";
+import advento from "/advento.webp";
+import calvinismoHumilde from "/calvinismo-humilde.webp";
+import tito from "/tito.webp";
+import OEvangelho from "/o-evangelho.webp";
+
+
 
 // --- DADOS DOS SERMÕES ---
 const sermonsData = [
@@ -7,7 +14,7 @@ const sermonsData = [
     id: 1,
     title: "Vinde a Mim!",
     seriesInfo: "Janeiro 2024",
-    imageUrl: "/caminho/para/sua/imagem1.jpg", 
+    imageUrl: vindeAMim,
     spotifyUrl: "https://open.spotify.com/sua-playlist-1",
     youtubeUrl: "https://youtube.com/sua-playlist-1",
   },
@@ -15,7 +22,7 @@ const sermonsData = [
     id: 2,
     title: "Advento",
     seriesInfo: "Dezembro 2023",
-    imageUrl: "/caminho/para/sua/imagem2.jpg", 
+    imageUrl: advento,
     spotifyUrl: "https://open.spotify.com/sua-playlist-2",
     youtubeUrl: "https://youtube.com/sua-playlist-2",
   },
@@ -23,7 +30,7 @@ const sermonsData = [
     id: 3,
     title: "Calvinismo Humilde",
     seriesInfo: "Novembro 2023",
-    imageUrl: "/caminho/para/sua/imagem3.jpg", 
+    imageUrl: calvinismoHumilde,
     spotifyUrl: "https://open.spotify.com/sua-playlist-3",
     youtubeUrl: "https://youtube.com/sua-playlist-3",
   },
@@ -31,7 +38,7 @@ const sermonsData = [
     id: 4,
     title: "Exposição de Tito",
     seriesInfo: "Setembro 2023",
-    imageUrl: "/caminho/para/sua/imagem4.jpg", 
+    imageUrl: tito,
     spotifyUrl: "https://open.spotify.com/sua-playlist-4",
     youtubeUrl: "https://youtube.com/sua-playlist-4",
   },
@@ -40,7 +47,7 @@ const sermonsData = [
     id: 5,
     title: "O Evangelho",
     seriesInfo: "Agosto 2023",
-    imageUrl: "", 
+    imageUrl: OEvangelho, 
     spotifyUrl: "#",
     youtubeUrl: "#",
   },
@@ -51,7 +58,7 @@ const SermonCard = ({ title, seriesInfo, imageUrl, spotifyUrl, youtubeUrl }) => 
   <article className="flex flex-col w-full bg-white rounded-md shadow-sm hover:shadow-lg transition-shadow duration-300 overflow-hidden group">
     
     {/* Área da Imagem (Agora fica no topo) */}
-    <div className="w-full h-48 overflow-hidden relative">
+    <div className="w-full aspect-video overflow-hidden relative">
       <img
         src={imageUrl || 'https://via.placeholder.com/500x500/38321d/FFFFFF?Text=Sermão'}
         alt={`Sermão: ${title}`}

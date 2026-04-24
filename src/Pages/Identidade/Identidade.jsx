@@ -44,40 +44,26 @@ const faithDocuments = [
 // Um componente simples para aplicar o estilo de sublinhado
 const Sublinhado = ({ children }) => {
   return (
-    <span className="underline decoration-[#4e4627] decoration-2 underline-offset-2 ">
+    <span className="underline decoration-olive decoration-2 underline-offset-2 ">
       {children}
     </span>
   );
 };
 
-// --- COMPONENTE DO BOTÃO DE DOWNLOAD (Mantive comentado como no original) ---
-// const DocumentLink = ({ title, fileUrl, styleType }) => {
-//   const baseStyle =
-//     "flex items-center justify-between w-full p-6 rounded-md text-lg font-semibold transition-colors duration-300 shadow-sm";
-//   const darkStyle = "bg-[#4e4627] text-white hover:bg-[#3a341d]";
-//   const lightStyle = "bg-[#e3dcd0] text-[#4e4627] hover:bg-[#d1c8b9]";
-//   const style = styleType === "dark" ? darkStyle : lightStyle;
-//   return (
-//     <a href={fileUrl} download className={`${baseStyle} ${style}`}>
-//       <span>{title}</span>
-//       <Download size={24} className="opacity-80" />
-//     </a>
-//   );
-// };
 
 // --- COMPONENTE PRINCIPAL ---
 export default function Identidade() {
   return (
-    <div className="bg-[#f7f5f1] min-h-screen">
+    <div className="bg-olive-lighter min-h-screen">
       <main className="py-16 sm:py-24 px-6">
         {/* Seção do Cabeçalho */}
         <header className="text-center max-w-4xl mx-auto mb-16 sm:mb-20">
-          <h2 className="text-4xl md:text-4xl font-bold text-[#914d30] tracking-tight mb-6">
+          <h2 className="text-4xl md:text-4xl font-bold text-terracotta tracking-tight mb-6">
             A Igreja da Cruz
           </h2>
           <div className="w-16 h-1 bg-black mx-auto mb-6 opacity-10"></div>
           {/* ALTERAÇÃO AQUI: Adicionado 'text-justify' e 'hyphens-auto' */}
-          <p className="text-justify hyphens-auto text-base md:text-lg text-[#4e4627]/80 max-w-3xl mx-auto">
+          <p className="text-justify hyphens-auto text-base md:text-lg text-olive/80 max-w-3xl mx-auto">
             É uma <strong>igreja batista reformada localizada na Zona Leste de São
             Paulo.</strong> Nascemos do desejo de <Sublinhado>ver o evangelho de Jesus Cristo
             transformando vidas, famílias e a cidade para a glória de Deus. </Sublinhado>
@@ -110,17 +96,7 @@ export default function Identidade() {
           </p>
         </header>
 
-        {/* Grade de Documentos (Mantive comentado como no original) */}
-        {/* <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-          {faithDocuments.map((doc) => (
-            <DocumentLink
-              key={doc.id}
-              title={doc.title}
-              fileUrl={doc.fileUrl}
-              styleType={doc.styleType}
-            />
-          ))}
-        </div> */}
+        
       </main>
     </div>
   );
