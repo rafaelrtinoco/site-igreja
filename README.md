@@ -1,17 +1,80 @@
-# React + Vite
+# Igreja da Cruz - Site Oficial
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é o repositório do site oficial da **Igreja da Cruz - Igreja Batista Reformada**, desenvolvido em React com Vite e TailwindCSS.
 
-Currently, two official plugins are available:
+## ✨ Sobre o Projeto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+O site apresenta informações institucionais, programação de cultos, comunicados, galeria de fotos, histórico da igreja, documentos confessionais e integração com Spotify e YouTube para sermões. O layout é responsivo, moderno e utiliza as cores e identidade visual da igreja.
 
-## React Compiler
+## 📦 Estrutura do Projeto
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```
+src/
+  App.jsx
+  main.jsx
+  index.css
+  components/
+    Header/
+    Footer/
+    Home/
+    Photos/
+    WelcomeSection/
+    visitUsSection/
+  Pages/
+    Home/
+    Identidade/
+    Historia/
+    Comunicados/
+    Sermoes/
+    Visite/
+public/
+  (imagens, logos, qrcode, etc)
+```
 
-## Expanding the ESLint configuration
+## 🚀 Como rodar o projeto
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# site-igreja
+1. **Clone o repositório:**
+   ```sh
+   git clone https://github.com/rafaelrtinoco/site-igreja.git
+   cd site-igreja
+   ```
+
+2. **Instale as dependências:**
+   ```sh
+   npm install
+   ```
+
+3. **Execute em modo desenvolvimento:**
+   ```sh
+   npm run dev
+   ```
+
+4. **Acesse:**  
+   Abra [http://localhost:5173/site-igreja](http://localhost:5173/site-igreja) no navegador.
+
+## 🛠️ Tecnologias Utilizadas
+
+- [React](https://react.dev/)
+- [Vite](https://vitejs.dev/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [React Router DOM](https://reactrouter.com/)
+- [React Icons](https://react-icons.github.io/react-icons/)
+- [Lucide React](https://lucide.dev/)
+- [ESLint](https://eslint.org/)
+
+## 📁 Deploy
+
+O deploy é feito via GitHub Pages. O comando para publicar é:
+```sh
+npm run deploy
+```
+O site fica disponível em:  
+https://rafaelrtinoco.github.io/site-igreja
+
+## 📄 Licença
+
+Este projeto é privado e de uso exclusivo da Igreja da Cruz.
+
+---
+
+Desenvolvido com ❤️ para a glória de Deus.
