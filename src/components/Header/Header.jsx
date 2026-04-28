@@ -96,39 +96,37 @@ export default function Header() {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 border-t border-brand-olive/10 pt-4">
-            <ul className="flex flex-col gap-4">
-              {menuItems.map((item) => (
-                <Fragment key={item.label}>
-                  <li>
-                    <Link
-                      to={item.href}
-                      className="text-brand-olive hover:text-brand-terracotta transition-colors font-medium block py-2"
-                      onClick={() => {
-                        if (!item.submenu) {
-                          setIsMenuOpen(false);
-                        }
-                      }}
-                    >
-                      {item.label}
-                    </Link>
-                  </li>
-                  {item.submenu && item.submenu.map((subItem) => (
-                    <li key={subItem.href} className="pl-6">
-                      <Link
-                        to={subItem.href}
-                        className="text-gray-700 hover:text-brand-terracotta transition-colors font-normal block py-1"
-                        onClick={() => setIsMenuOpen(false)}
-                      >
-                        {subItem.label}
-                      </Link>
-                    </li>
-                  ))}
-                </Fragment>
-              ))}
-            </ul>
-          </div>
-        )}
+  <div className="md:hidden mt-4 pb-4 border-t border-olive/10 pt-4">
+    <ul className="flex flex-col gap-4">
+      {menuItems.map((item) => (
+        <Fragment key={item.label}>
+          <li>
+            <Link
+              to={item.href}
+              className="text-olive hover:text-terracotta transition-colors font-medium block py-2"
+              
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {item.label}
+            </Link>
+          </li>
+          
+          {item.submenu && item.submenu.map((subItem) => (
+            <li key={subItem.href} className="pl-6">
+              <Link
+                to={subItem.href}
+                className="text-gray-700 hover:text-terracotta transition-colors font-normal block py-1"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {subItem.label}
+              </Link>
+            </li>
+          ))}
+        </Fragment>
+      ))}
+    </ul>
+  </div>
+)}
       </nav>
     </header>
   );
