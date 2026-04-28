@@ -11,15 +11,96 @@ import {
 // --- DADOS DOS EVENTOS ---
 const specialEvents = [  
   {
-    id: "sp-2",
+    id: "mes-4",
     title: "Encontro de Homens e Mulheres",
-    day: 25,
-    month: 3, // Abril (0=Jan, 1=Fev, 2=Mar, 3=Abr)
+    day: 4,
+    month: 3, 
+    year: 2026,
+    time: "19:00",
+    location: "Rua Jucuruçu, 282",
+    description: "Momento de edificação e partilha.",
+  },
+  {
+    id: "mes-5",
+    title: "Encontro de Homens e Mulheres",
+    day: 2,
+    month: 4, 
+    year: 2026,
+    time: "19:00",
+    location: "Rua Jucuruçu, 282",
+    description: "Momento de edificação e partilha.",
+  },
+  {
+    id: "mes-6",
+    title: "Encontro de Homens e Mulheres",
+    day: 6,
+    month: 5, 
+    year: 2026,
+    time: "19:00",
+    location: "Rua Jucuruçu, 282",
+    description: "Momento de edificação e partilha.",
+  }, 
+  {
+    id: "mes-7",
+    title: "Encontro de Homens e Mulheres",
+    day: 4,
+    month: 6, 
+    year: 2026,
+    time: "19:00",
+    location: "Rua Jucuruçu, 282",
+    description: "Momento de edificação e partilha.",
+  }, 
+  {
+    id: "mes-8",
+    title: "Encontro de Homens e Mulheres",
+    day: 1,
+    month: 7, 
+    year: 2026,
+    time: "19:00",
+    location: "Rua Jucuruçu, 282",
+    description: "Momento de edificação e partilha.",
+  }, 
+  {
+    id: "mes-9",
+    title: "Encontro de Homens e Mulheres",
+    day: 5,
+    month: 8, 
+    year: 2026,
+    time: "19:00",
+    location: "Rua Jucuruçu, 282",
+    description: "Momento de edificação e partilha.",
+  }, 
+  {
+    id: "mes-10",
+    title: "Encontro de Homens e Mulheres",
+    day: 3,
+    month: 9, 
+    year: 2026,
+    time: "19:00",
+    location: "Rua Jucuruçu, 282",
+    description: "Momento de edificação e partilha.",
+  }, 
+  {
+    id: "mes-11",
+    title: "Encontro de Homens e Mulheres",
+    day: 9,
+    month: 10, 
+    year: 2026,
+    time: "19:00",
+    location: "Rua Jucuruçu, 282",
+    description: "Momento de edificação e partilha.",
+  }, 
+  {
+    id: "mes-12",
+    title: "Encontro de Homens e Mulheres",
+    day: 5,
+    month: 11, 
     year: 2026,
     time: "19:00",
     location: "Rua Jucuruçu, 282",
     description: "Momento de edificação e partilha.",
   }
+
 ];
 
 export default function Eventos() {
@@ -52,7 +133,7 @@ export default function Eventos() {
           title: "Escola Bíblica",
           day: day,
           time: "09:00",
-          location: "Salas de Aula",
+          location: "Templo Principal",
           description: "Escola Bíblica Dominical.",
           isRecurring: true
         });
@@ -121,7 +202,7 @@ export default function Eventos() {
                     {/* Lógica de exibição do nome ou horário */}
                     {dayEvent ? (
                       <span className="text-[9px] md:text-[11px] font-medium leading-tight text-center mt-1 line-clamp-2 uppercase tracking-tighter">
-                        {dayEvent.title}
+                        {dayEvent.time}
                       </span>
                     ) : sunday ? (
                       <span className="text-[10px] md:text-xs font-medium opacity-90 mt-1 text-center">

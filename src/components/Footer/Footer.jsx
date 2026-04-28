@@ -1,28 +1,30 @@
-import { Facebook, Instagram, Youtube, Music } from 'lucide-react';
-import {
-  FaFacebook,
-  FaInstagram,
-  FaYoutube,
-  FaMusic,
-  FaSpotify,
-  FaCopy,
-} from "react-icons/fa";
+import { FaInstagram, FaYoutube, FaSpotify } from "react-icons/fa";
 
 export default function Footer() {
   const socialLinks = [
-    { icon: FaFacebook, href: '#', label: 'Facebook' },
-    { icon: FaInstagram, href: '#', label: 'Instagram' },
-    { icon: FaYoutube, href: '#', label: 'YouTube' },
-    { icon: FaSpotify, href: '#', label: 'Spotify' },
+    {
+      icon: FaInstagram,
+      href: "https://www.instagram.com/aigrejadacruz?igsh=Zmd1MG9uanFhbDh4",
+      label: "Instagram",
+    },
+    {
+      icon: FaYoutube,
+      href: "https://www.youtube.com/@igrejadacruz6659",
+      label: "YouTube",
+    },
+    {
+      icon: FaSpotify,
+      href: "https://open.spotify.com/show/3ZDOME0aI6bCU9CGBNzB4f?si=HjFAegS-R-GXsYP2YwwNbA",
+      label: "Spotify",
+    },
   ];
-  
 
   return (
-    <footer className="bg-[#f5f4f0] border-t border-[#914d30] py-8 px-6">
+    <footer className="bg-olive-lighter border-t border-terracotta py-8 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           {/* Copyright */}
-          <p className="text-[#914d30] font-semibold">
+          <p className="text-terracotta font-semibold">
             © {new Date().getFullYear()} - IGREJA DA CRUZ
           </p>
 

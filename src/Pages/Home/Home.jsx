@@ -11,8 +11,9 @@ import {
 import Photos from "../../components/Photos/Photos";
 import WelcomeSection from "../../components/WelcomeSection/WelcomeSection";
 import backgroundImage from "/background-home.webp";
-import VisitUsSection from "../../components/visitUsSection/visitUsSection"
+import VisitUsSection from "../../components/visitUsSection/visitUsSection";
 import QrCode from "/qrcode-pix.png";
+import { Link } from "react-router-dom";
 
 // A função de copiar PIX precisará ser definida no seu componente ou hook
 const handleCopyPix = () => {
@@ -22,38 +23,47 @@ const handleCopyPix = () => {
   });
 };
 
-
-
 export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
       <section
-  className="relative h-screen bg-cover bg-center bg-no-repeat"
-  style={{ backgroundImage: `url(${backgroundImage})` }}
->
-  {/* Overlay verde com opacidade */}
-  <div className="absolute inset-0 bg-olive/95"></div>
+        className="relative h-screen bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${backgroundImage})` }}
+      >
+        {/* Overlay verde com opacidade */}
+        <div className="absolute inset-0 bg-olive/95"></div>
 
-  {/* Conteúdo centralizado */}
-  <div className="relative h-full flex flex-col items-center justify-center text-center text-white px-6 z-10">
-    <h1 className="text-5xl md:text-5xl font-bold text-brand-white mb-6">
-      IGREJA DA CRUZ
-    </h1>
-    <p className="text-xl md:text-1xl text-brand-white/90 max-w-3xl leading-relaxed mb-10">
-      IGREJA BATISTA REFORMADA
-    </p>
-    <div className="flex flex-col sm:flex-row gap-4">
-      <button className="bg-terracotta text-brand-white px-8 py-3 rounded hover:bg-terracotta transition-colors font-medium text-lg shadow-lg">
-        ASSISTA AO ÚLTIMO SERMÃO
-      </button>
-      <button className="border-2 border-white text-white px-8 py-3 rounded hover:bg-white hover:text-olive transition-colors font-medium text-lg shadow-lg">
-        PLANEJE SUA VISITA
-      </button>
-    </div>
-    <WelcomeSection />
-  </div>
-</section>
+        {/* Conteúdo centralizado */}
+        <div className="relative h-full flex flex-col items-center justify-center text-center text-white px-6 z-10">
+          <h1 className="text-5xl md:text-5xl font-bold text-brand-white mb-6">
+            IGREJA DA CRUZ
+          </h1>
+          <p className="text-xl md:text-1xl text-brand-white/90 max-w-3xl leading-relaxed mb-10">
+            IGREJA BATISTA REFORMADA
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4">
+            {/* Link Externo para o YouTube */}
+            <a
+              href="https://www.youtube.com/LINK_DO_SEU_CANAL_OU_VIDEO"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-terracotta text-white px-8 py-3 rounded hover:bg-terracotta-light transition-colors font-medium text-lg shadow-lg text-center"
+            >
+              ASSISTA AOS NOSSOS CULTOS
+            </a>
+
+            {/* Link Interno para a página de visitas */}
+            <Link
+              to="/visite-nos"
+              className="border-2 border-white text-white px-8 py-3 rounded hover:bg-white hover:text-olive transition-colors font-medium text-lg shadow-lg text-center"
+            >
+              PLANEJE SUA VISITA
+            </Link>
+          </div>
+          <WelcomeSection />
+        </div>
+      </section>
 
       {/* Seção Spotify */}
       <section className="bg-brand-olive-lighter py-20 px-6">
@@ -67,10 +77,10 @@ export default function Home() {
             que você consiga ouvir quando puder.
           </p>
           <a
-            href="#" // <-- Substitua com o link da sua playlist do Spotify
+            href="https://open.spotify.com/show/3ZDOME0aI6bCU9CGBNzB4f?si=HjFAegS-R-GXsYP2YwwNbA"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-terracotta text-[#fff] px-8 py-3 rounded hover:bg-terracotta-light transition-colors font-medium text-lg"
+            className="inline-block bg-terracotta text-white px-8 py-3 rounded hover:bg-terracotta-light transition-colors font-medium text-lg"
           >
             OUVIR NO SPOTIFY
           </a>
@@ -78,7 +88,6 @@ export default function Home() {
       </section>
 
       <Photos />
-
 
       <section className="bg-brand-olive/5 py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
@@ -121,10 +130,7 @@ export default function Home() {
                 Ou aponte a câmera
               </p>
               <div className="bg-white p-2 inline-block">
-                <img
-                  src={QrCode}
-                  alt="QR Code PIX"
-                />
+                <img src={QrCode} alt="QR Code PIX" />
               </div>
             </div>
           </div>

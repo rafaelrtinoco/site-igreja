@@ -7,7 +7,7 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuItems = [
-    { label: 'Início', href: '/site-igreja' },
+    { label: 'Início', href: '/' },
     {
       label: 'Identidade',
       href: '/identidade',
@@ -23,11 +23,11 @@ export default function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-[#fff]/75 backdrop-blur-xl border-b border-[#4e4627]/20">
+    <header className="sticky top-0 z-50 bg-white/75 backdrop-blur-xl border-b border-olive/20">
       <nav className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/site-igreja" aria-label="Página Inicial">
+          <Link to="/" aria-label="Página Inicial">
             <img className="h-16 md:h-20 w-auto" src={Logo} alt="Logo Igreja da Cruz" />
           </Link>
 
@@ -38,7 +38,7 @@ export default function Header() {
                 <li key={item.label} className="relative group">
                   <Link
                     to={item.href}
-                    className="hover:text-[#4e4627] transition-colors flex items-center gap-1"
+                    className="hover:text-olive transition-colors flex items-center gap-1"
                   >
                     {item.label}
                     <ChevronDown size={16} className="transition-transform duration-200 group-hover:rotate-180" />
@@ -51,7 +51,7 @@ export default function Header() {
                     top-full     // Posiciona abaixo do item pai
                     w-48         // Largura fixa
                     bg-white
-                    border border-[#4e4627]/20
+                    border border-olive/20
                     rounded-md
                     shadow-lg
                     pt-4         // {/** MUDANÇA: 'mt-2' e 'py-2' viraram 'pt-4' **/}
@@ -63,7 +63,7 @@ export default function Header() {
                       <li key={subItem.href}>
                         <Link
                           to={subItem.href}
-                          className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100 hover:text-[#4e4627] font-medium"
+                          className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100 hover:text-olive font-medium"
                         >
                           {subItem.label}
                         </Link>
@@ -75,7 +75,7 @@ export default function Header() {
                 <li key={item.href}>
                   <Link
                     to={item.href}
-                    className="hover:text-[#4e4627] transition-colors"
+                    className="hover:text-olive transition-colors"
                   >
                     {item.label}
                   </Link>
