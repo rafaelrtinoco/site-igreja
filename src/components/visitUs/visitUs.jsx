@@ -58,7 +58,7 @@ export default function VisitUsSection() {
               </p>
               <p className="text-lg">
                 <span className="font-semibold">Reunião de Homens de Mulheres:</span> <br />
-                Ultimo Sábado do mês 19h00
+                Primeiro Sábado do mês 19h00
               </p>
             </div>
 

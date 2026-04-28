@@ -1,13 +1,6 @@
 import React from "react";
 // Ícones importados da biblioteca react-icons, de pacotes específicos como 'fa' (Font Awesome)
-import {
-  FaFacebook,
-  FaInstagram,
-  FaYoutube,
-  FaMusic,
-  FaSpotify,
-  FaCopy,
-} from "react-icons/fa";
+import { FaSpotify, FaCopy } from "react-icons/fa";
 import Photos from "../../components/Photos/Photos";
 import WelcomeSection from "../../components/WelcomeSection/WelcomeSection";
 import backgroundImage from "/background-home.webp";
@@ -45,7 +38,7 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-4">
             {/* Link Externo para o YouTube */}
             <a
-              href="https://www.youtube.com/LINK_DO_SEU_CANAL_OU_VIDEO"
+              href="https://www.youtube.com/@igrejadacruz6659/streams"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-terracotta text-white px-8 py-3 rounded hover:bg-terracotta-light transition-colors font-medium text-lg shadow-lg text-center"
