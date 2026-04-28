@@ -18,7 +18,7 @@ function App() {
 
       <Routes>
         {/* 3. Cada <Route> mapeia uma URL para um componente */}
-        <Route path="/site-igreja" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/sermoes" element={<SermonCard />} />
         <Route path="/identidade" element={<Identidade />} />
         <Route path="/identidade/historia" element={<Historia />} />
