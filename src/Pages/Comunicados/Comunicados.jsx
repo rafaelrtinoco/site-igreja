@@ -83,7 +83,7 @@ const specialEvents = [
   {
     id: "mes-11",
     title: "Encontro de Homens e Mulheres",
-    day: 9,
+    day: 7,
     month: 10, 
     year: 2026,
     time: "19:00",

@@ -58,7 +58,7 @@ export default function Identidade() {
       <main className="py-16 sm:py-24 px-6">
         {/* Seção do Cabeçalho */}
         <header className="text-center max-w-4xl mx-auto mb-16 sm:mb-20">
-          <h2 className="text-4xl md:text-4xl font-bold text-terracotta tracking-tight mb-6">
+          <h2 className="text-4xl md:text-4xl font-bold text-olive tracking-tight mb-6">
             A Igreja da Cruz
           </h2>
           <div className="w-16 h-1 bg-black mx-auto mb-6 opacity-10"></div>

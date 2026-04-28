@@ -4,7 +4,7 @@ import vindeAMim from "/vinde-a-mim.webp";
 import advento from "/advento.webp";
 import calvinismoHumilde from "/calvinismo-humilde.webp";
 import tito from "/tito.webp";
-import OEvangelho from "/o-evangelho.webp";
+// import OEvangelho from "/o-evangelho.webp";
 
 // --- DADOS DOS SERMÕES ---
 const sermonsData = [
