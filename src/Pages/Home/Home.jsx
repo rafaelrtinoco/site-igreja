@@ -93,6 +93,7 @@ export default function Home() {
             contribuição pode ser feita através do PIX da Igreja. Que ninguém se
             sinta pressionado a contribuir, mas que cada um o faça conforme
             propôs em seu coração, com alegria e louvor a Deus, como nos ensina
+            {"\n"}
             2 Coríntios 9:7."
           </p>
           <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">

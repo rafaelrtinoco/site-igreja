@@ -1,25 +1,25 @@
-import { useState, Fragment } from 'react';
-import { Menu, X, ChevronDown } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { useState, Fragment } from "react";
+import { Menu, X, ChevronDown } from "lucide-react";
+import { Link } from "react-router-dom";
 import Logo from "/logo-LARANJA.png";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuItems = [
-    { label: 'Início', href: '/' },
+    { label: "Início", href: "/" },
     {
-      label: 'Identidade',
-      href: '/identidade',
+      label: "Identidade",
+      href: "/identidade",
       submenu: [
-        { label: 'Nossa História', href: '/identidade/historia' },
-        { label: 'Confissão de Fé', href: '/identidade/confissao' },
-        { label: 'Liderança', href: '/identidade/lideranca' },
+        { label: "Nossa História", href: "/identidade/historia" },
+        { label: "Confissão de Fé", href: "/identidade/confissao" },
+        { label: "Liderança", href: "/identidade/lideranca" },
       ],
     },
-    { label: 'Sermões', href: '/sermoes' },
-    { label: 'Comunicados', href: '/comunicados' },
-    { label: 'Visite-nos', href: '/visite-nos' },
+    { label: "Sermões", href: "/sermoes" },
+    { label: "Comunicados", href: "/comunicados" },
+    { label: "Visite-nos", href: "/visite-nos" },
   ];
 
   return (
@@ -28,12 +28,16 @@ export default function Header() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" aria-label="Página Inicial">
-            <img className="h-16 md:h-20 w-auto" src={Logo} alt="Logo Igreja da Cruz" />
+            <img
+              className="h-16 md:h-20 w-auto"
+              src={Logo}
+              alt="Logo Igreja da Cruz"
+            />
           </Link>
 
           {/* Desktop Menu */}
           <ul className="hidden md:flex items-center gap-8 font-black">
-            {menuItems.map((item) => (
+            {menuItems.map((item) =>
               item.submenu ? (
                 <li key={item.label} className="relative group">
                   <Link
@@ -41,11 +45,15 @@ export default function Header() {
                     className="hover:text-olive transition-colors flex items-center gap-1"
                   >
                     {item.label}
-                    <ChevronDown size={16} className="transition-transform duration-200 group-hover:rotate-180" />
+                    <ChevronDown
+                      size={16}
+                      className="transition-transform duration-200 group-hover:rotate-180"
+                    />
                   </Link>
 
                   {/* O Dropdown em si */}
-                  <ul className="
+                  <ul
+                    className="
                     absolute
                     left-0
                     top-full     // Posiciona abaixo do item pai
@@ -58,7 +66,8 @@ export default function Header() {
                     pb-2         // {/** MUDANÇA: e 'pb-2' **/}
                     hidden       // Escondido por padrão
                     group-hover:block // Aparece no hover do 'group' (o <li> pai)
-                  ">
+                  "
+                  >
                     {item.submenu.map((subItem) => (
                       <li key={subItem.href}>
                         <Link
@@ -81,7 +90,7 @@ export default function Header() {
                   </Link>
                 </li>
               )
-            ))}
+            )}
           </ul>
 
           {/* Mobile Menu Button */}
@@ -96,37 +105,37 @@ export default function Header() {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-  <div className="md:hidden mt-4 pb-4 border-t border-olive/10 pt-4">
-    <ul className="flex flex-col gap-4">
-      {menuItems.map((item) => (
-        <Fragment key={item.label}>
-          <li>
-            <Link
-              to={item.href}
-              className="text-olive hover:text-terracotta transition-colors font-medium block py-2"
-              
-              onClick={() => setIsMenuOpen(false)}
-            >
-              {item.label}
-            </Link>
-          </li>
-          
-          {item.submenu && item.submenu.map((subItem) => (
-            <li key={subItem.href} className="pl-6">
-              <Link
-                to={subItem.href}
-                className="text-gray-700 hover:text-terracotta transition-colors font-normal block py-1"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {subItem.label}
-              </Link>
-            </li>
-          ))}
-        </Fragment>
-      ))}
-    </ul>
-  </div>
-)}
+          <div className="md:hidden mt-4 pb-4 border-t border-olive/10 pt-4">
+            <ul className="flex flex-col gap-4">
+              {menuItems.map((item) => (
+                <Fragment key={item.label}>
+                  <li>
+                    <Link
+                      to={item.href}
+                      className="text-olive hover:text-terracotta transition-colors font-medium block py-2"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+
+                  {item.submenu &&
+                    item.submenu.map((subItem) => (
+                      <li key={subItem.href} className="pl-6">
+                        <Link
+                          to={subItem.href}
+                          className="text-gray-700 hover:text-terracotta transition-colors font-normal block py-1"
+                          onClick={() => setIsMenuOpen(false)}
+                        >
+                          {subItem.label}
+                        </Link>
+                      </li>
+                    ))}
+                </Fragment>
+              ))}
+            </ul>
+          </div>
+        )}
       </nav>
     </header>
   );

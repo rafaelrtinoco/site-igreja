@@ -99,7 +99,27 @@ const specialEvents = [
     time: "19:00",
     location: "Rua Jucuruçu, 282",
     description: "Momento de edificação e partilha.",
-  }
+  },
+  {
+    id: "GC-5",
+    title: "Grupo de Comunhão",
+    day: 14,
+    month: 4, 
+    year: 2026,
+    time: "20:00",
+    location: "Consultar endereços.",
+    description: "Momento de edificação e partilha.",
+  },
+  {
+    id: "GC-5.1",
+    title: "Grupo de Comunhão",
+    day: 28,
+    month: 4, 
+    year: 2026,
+    time: "20:00",
+    location: "Consultar endereços.",
+    description: "Momento de edificação e partilha.",
+  },
 
 ];
 
@@ -133,17 +153,17 @@ export default function Eventos() {
           title: "Escola Bíblica",
           day: day,
           time: "09:00",
-          location: "Templo Principal",
+          location: "Rua Jucuruçu, 282",
           description: "Escola Bíblica Dominical.",
           isRecurring: true
         });
         list.push({
           id: `culto-${day}`,
-          title: "Culto de Celebração",
+          title: "Serviço de Culto",
           day: day,
           time: "10:30",
-          location: "Templo Principal",
-          description: "Culto Solene.",
+          location: "Rua Jucuruçu, 282",
+          description: "Serviço de Culto.",
           isRecurring: true
         });
       }
@@ -242,7 +262,7 @@ export default function Eventos() {
                   <p className="text-xs text-olive/70 flex items-center gap-1 mb-2 font-montserrat">
                     <FaMapMarkerAlt size={10} /> {event.location}
                   </p>
-                  <p className="text-sm opacity-80 leading-snug">{event.description}</p>
+                  {/* <p className="text-sm opacity-80 leading-snug">{event.description}</p> */}
                 </div>
               ))}
             </div>

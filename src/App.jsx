@@ -7,6 +7,7 @@ import Identidade from "./Pages/Identidade/Identidade";
 import Historia from "./Pages/Historia/Historia";
 import Comunicados from "./Pages/Comunicados/Comunicados";
 import Visite from "./Pages/Visite/Visite";
+import Confissao from "./Pages/Confissao/Confissao";
 import "./index.css";
 
 import { Routes, Route } from "react-router-dom";
@@ -22,6 +23,7 @@ function App() {
         <Route path="/sermoes" element={<SermonCard />} />
         <Route path="/identidade" element={<Identidade />} />
         <Route path="/identidade/historia" element={<Historia />} />
+        <Route path="/identidade/confissao" element={<Confissao />} />
         <Route path="/comunicados" element={<Comunicados />} />
         <Route path="/visite-nos" element={<Visite />} />
       </Routes>
