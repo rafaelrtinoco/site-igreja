@@ -14,7 +14,7 @@ export default function Header() {
       submenu: [
         { label: "Nossa História", href: "/identidade/historia" },
         { label: "Confissão de Fé", href: "/identidade/confissao" },
-        { label: "Liderança", href: "/identidade/lideranca" },
+        // { label: "Liderança", href: "/identidade/lideranca" },
       ],
     },
     { label: "Sermões", href: "/sermoes" },
