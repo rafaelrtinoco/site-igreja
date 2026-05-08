@@ -123,7 +123,7 @@ export default function Sermoes() {
             Sermões
           </h2>
           {/* Linha decorativa opcional igual ao print */}
-          <div className="w-16 h-1 bg-black mx-auto mb-6 opacity-10"></div>
+          <div className="w-16 h-1 bg-olive mx-auto mb-10 rounded-full"></div>
 
           <p className="text-base md:text-lg text-olive/80 leading-relaxed">
             Disponibilizamos os nossos sermões como um complemento na caminhada

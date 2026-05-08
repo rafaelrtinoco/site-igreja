@@ -25,14 +25,14 @@ export default function Home() {
         style={{ backgroundImage: `url(${backgroundImage})` }}
       >
         {/* Overlay verde com opacidade */}
-        <div className="absolute inset-0 bg-olive/95"></div>
+        <div className="absolute inset-0 bg-olive/80"></div>
 
         {/* Conteúdo centralizado */}
         <div className="relative h-full flex flex-col items-center justify-center text-center text-white px-6 z-10">
-          <h1 className="text-5xl md:text-5xl font-bold text-brand-white mb-6">
+          <h1 className="text-5xl md:text-5xl font-extrabold text-brand-white mb-6">
             IGREJA DA CRUZ
           </h1>
-          <p className="text-xl md:text-1xl text-brand-white/90 max-w-3xl leading-relaxed mb-10">
+          <p className="text-xl md:text-1xl font-extrabold text-brand-white/90 max-w-3xl leading-relaxed mb-10">
             IGREJA BATISTA REFORMADA
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
@@ -87,13 +87,13 @@ export default function Home() {
           <h2 className="text-3xl md:text-4xl font-bold text-brand-terracotta mb-6">
             Ofertas
           </h2>
-          <div className="w-16 h-1 bg-black mx-auto mb-6 opacity-10"></div>
+          <div className="w-16 h-1 bg-olive mx-auto mb-10 rounded-full"></div>
           <p className="text-lg text-brand-olive/80 mb-10 max-w-4xl mx-auto">
             "Para aqueles que desejam louvar ao Senhor com suas ofertas, a
             contribuição pode ser feita através do PIX da Igreja. Que ninguém se
             sinta pressionado a contribuir, mas que cada um o faça conforme
-            propôs em seu coração, com alegria e louvor a Deus, como nos ensina
-            {"\n"}
+            propôs em seu coração, com alegria e louvor a Deus, como nos ensina.
+            <div className="mb-1"></div>
             2 Coríntios 9:7."
           </p>
           <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">

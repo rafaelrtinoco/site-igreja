@@ -20,7 +20,7 @@ export default function Identidade() {
             História da Igreja
           </h2>
 
-          <div className="w-16 h-1 bg-black mx-auto mb-6 opacity-10"></div>
+           <div className="w-16 h-1 bg-terracotta mx-auto mb-10 rounded-full"></div>
 
           {/* ALTERAÇÃO AQUI: Adicionado 'text-justify' e 'hyphens-auto' */}
           <p className="text-justify hyphens-auto text-base md:text-lg text-olive/80 max-w-3xl mx-auto">

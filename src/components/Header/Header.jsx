@@ -18,7 +18,7 @@ export default function Header() {
       ],
     },
     { label: "Sermões", href: "/sermoes" },
-    { label: "Comunicados", href: "/comunicados" },
+    { label: "Agenda", href: "/comunicados" },
     { label: "Visite-nos", href: "/visite-nos" },
   ];
 
